@@ -1,0 +1,87 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: linear-gradient(to right, #f6f4f0, #d7ffff);
+}
+.container {
+  width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+h1 {
+  margin-bottom: 10px;
+}
+.clickedcell {
+  background-color: linear-gradient(to right, #f6f4f0, #d7ffff);
+}
+
+.board {
+  /* display: table; */
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid black;
+  margin: 0 auto;
+  /* table-layout: fixed; */
+}
+
+td {
+  height: 40px;
+  width: 40px;
+  background-color: transparent;
+  border: 0.5px solid black;
+}
+.unclicked {
+  position: relative;
+  box-sizing: inherit;
+  background-color: #333;
+}
+.unclicked::before {
+  content: '';
+
+  position: absolute;
+  background-color: inherit;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  z-index: 1;
+}
+
+.btn {
+  font-size: 20px;
+
+  display: inline-block;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+.btn:hover {
+  background-color: #48f172;
+  box-shadow: #12b81b 0 -6px 8px inset;
+  transform: scale(1.125);
+}
+.restart {
+  margin-bottom: 10px;
+}
+.restart:hover {
+  background-color: #c82121;
+  box-shadow: #ff4f4f 0 -6px 8px inset;
+  transform: scale(1.125);
+}
+
+.btns {
+  margin-bottom: 10px;
+}
+.btns .btn {
+  padding: 10px 20px;
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
